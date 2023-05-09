@@ -23,23 +23,27 @@ As a data analyst, one of my primary responsibilities is to develop a tool that 
 ## Results
 
 * Data Preprocessing (Q & A):
-1. What variable(s) are the target(s) for the models?
-   Both of the original and optimized models are trained using 'IS_SUCCESSFUL' as the target variable.
 
-2. What variable(s) are the features for the models?
+    * What variable(s) are the target(s) for the models?
+    Both of the original and optimized models are trained using 'IS_SUCCESSFUL' as the target variable.
+
+    * What variable(s) are the features for the models?
     The feature variables in the original model excluded the 'EIN', 'NAME', 'IS_SUCCESSFUL' columns, and included all other columns.
     To improve the accuracy of the tool, in the optimized model, I included the 'NAME' column as one of the feature variables.
-3. What variable(s) should be removed from the input data because they are neither targets nor features?
+
+    * What variable(s) should be removed from the input data because they are neither targets nor features?
     Typically, 'EIN' and 'NAME' should be removed, but for improving prediction accuracy, 'NAME' may be included as a feature variable.
 
 
 * Compiling, Training, and Evaluating the Model (Q & A):
 
-1. How many neurons, layers, and activation functions did you select for your neural network model, and why?
-For both the original and optimized models, I chose to include two hidden layers. The first hidden layer had 20 neurons, calculated by dividing the number of columns by 2 (45 columns / 2 almost equals to  20), and the second layer contained 10 neurons (20 / 2 = 10). In both layers, I used the 'relu' activation function. For the ouput layer,  I chose sigmoid function, , as it is commonly used for binary classification tasks.
+    * How many neurons, layers, and activation functions did you select for your neural network model, and why?
 
-2. Were you able to achieve the target model performance? What steps did you take in your attempts to increase model performance?
-The initial target predictive accuracy of the model was 0.7325, which didn't meet the required standard. To increase the model's performance, I included  "NAME" as one of the feature variables. 
+    For both the original and optimized models, I chose to include two hidden layers. The first hidden layer had 20 neurons, calculated by dividing the number of columns by 2 (45 columns / 2 almost equals to  20), and the second layer contained 10 neurons (20 / 2 = 10). In both layers, I used the 'relu' activation function. For the ouput layer,  I chose sigmoid function, as it is commonly used for binary classification tasks.
+
+    * Were you able to achieve the target model performance? What steps did you take in your attempts to increase model performance?
+    The initial target predictive accuracy of the model was 0.7325, which didn't meet the required standard. To increase the model's performance, I included  "NAME" as one of the feature variables. 
+
 
 ![Accuracy of the Original Model Across Epochs](https://github.com/cycy94777/deep_learning_analysis/blob/main/image/accuracy.png?raw=true)
 
