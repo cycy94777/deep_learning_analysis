@@ -29,8 +29,8 @@ As a data analyst, one of my primary responsibilities is to develop a tool that 
 2. What variable(s) are the features for the models?
     The feature variables in the original model excluded the 'EIN', 'NAME', 'IS_SUCCESSFUL' columns, and included all other columns.
     To improve the accuracy of the tool, in the optimized model, I included the 'NAME' column as one of the feature variables.
-    ![Accuracy of the Original Model Across Epochs]('https://github.com/cycy94777/deep_learning_analysis/blob/main/image/accuracy.png?raw=true')
-    ![Accuracy of the Optimized Model Across Epochs]('https://github.com/cycy94777/deep_learning_analysis/blob/main/image/opt_accuracy.png?raw=true')
+    ![Accuracy of the Original Model Across Epochs](https://github.com/cycy94777/deep_learning_analysis/blob/main/image/accuracy.png?raw=true)
+    ![Accuracy of the Optimized Model Across Epochs](https://github.com/cycy94777/deep_learning_analysis/blob/main/image/opt_accuracy.png?raw=true)
 3. What variable(s) should be removed from the input data because they are neither targets nor features?
     Typically, 'EIN' and 'NAME' should be removed, but for improving prediction accuracy, 'NAME' may be included as a feature variable.
 
