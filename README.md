@@ -42,21 +42,25 @@ As a data analyst, one of my primary responsibilities is to develop a tool that 
 
     * How many neurons, layers, and activation functions did you select for your neural network model, and why?
 
-        For both the original and optimized models, I chose to include two hidden layers. The first hidden layer had 20 neurons, calculated by dividing the number of columns by 2 (45 columns / 2 almost equals to  20), and the second layer contained 10 neurons (20 / 2 = 10). In both layers, I used the 'relu' activation function. For the ouput layer,  I chose sigmoid function, as it is commonly used for binary classification tasks.
+        For the original model, I chose to include two hidden layers. The first hidden layer had 20 neurons, calculated by dividing the number of columns by 2 (45 columns / 2 almost equals to  20), and the second layer contained 10 neurons (20 / 2 = 10). In both layers, I used the 'relu' activation function.
+
+        For the optimized models, I chose to include three hidden layers. The first two layers' structure is same as the original model and the third layer contained 5 neurons (10 / 2 = 5). In all these layers, I used 'relu' activation function.
+
+        For the ouput layer of both original and optimized models,  I chose sigmoid function, as it is commonly used for binary classification tasks.
 
     * Were you able to achieve the target model performance? What steps did you take in your attempts to increase model performance?
     
-        The initial target predictive accuracy of the model was 0.7325, which didn't meet the required standard. To increase the model's performance, I included  "NAME" as one of the feature variables. 
+        The initial target predictive accuracy of the model was 0.7318, which did not meet the required standard. To improve the model's performance, I included "NAME" as one of the feature variables, added an extra hidden layer, and increased the number of epochs.
 
 
 ![Accuracy of the Original Model Across Epochs](https://github.com/cycy94777/deep_learning_analysis/blob/main/image/accuracy.png?raw=true)
 
-After optimizing the model, the target predictive accuracy increased to 0.7523, slightly above 75%. Therefore, we could conclude that the model now meets the required guideline.
+After optimizing the model, the target predictive accuracy increased to 0.7541, slightly above 75%. Therefore, we could conclude that the model now meets the required guideline.
 
 ![Accuracy of the Optimized Model Across Epochs](https://github.com/cycy94777/deep_learning_analysis/blob/main/image/opt_plot.png?raw=true)
 
 
 ## Summary
-The primary difference between the original and optimized models is the inclusion of the 'NAME' feature variable. Adding this feature has increased the model's predictive accuracy from 0.7325 to 0.7523, meeting the 75% guideline. 
+The main differences between the original and optimized models include adding the 'NAME' feature variable, an additional hidden layer, and increasing the number of epochs. These optimization methods have increased the model's predictive accuracy from 0.7318 to 0.7541, meeting the 75% guideline.
 However, including 'NAME' as a feature variable may potentially impact fairness in the model. 
 In situations where fairness is crucial, such as in certain legal or ethical contexts, it may be more appropriate to use the original model. On the other hand, if maximizing predictive accuracy is the primary objective and fairness concerns are less pressing, then the optimized model may be more appropriate.
