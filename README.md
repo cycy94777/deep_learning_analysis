@@ -29,8 +29,6 @@ As a data analyst, one of my primary responsibilities is to develop a tool that 
 2. What variable(s) are the features for the models?
     The feature variables in the original model excluded the 'EIN', 'NAME', 'IS_SUCCESSFUL' columns, and included all other columns.
     To improve the accuracy of the tool, in the optimized model, I included the 'NAME' column as one of the feature variables.
-    ![Accuracy of the Original Model Across Epochs](https://github.com/cycy94777/deep_learning_analysis/blob/main/image/accuracy.png?raw=true)
-    ![Accuracy of the Optimized Model Across Epochs](https://github.com/cycy94777/deep_learning_analysis/blob/main/image/opt_accuracy.png?raw=true)
 3. What variable(s) should be removed from the input data because they are neither targets nor features?
     Typically, 'EIN' and 'NAME' should be removed, but for improving prediction accuracy, 'NAME' may be included as a feature variable.
 
@@ -42,7 +40,13 @@ For both the original and optimized models, I chose to include two hidden layers
 
 2. Were you able to achieve the target model performance? What steps did you take in your attempts to increase model performance?
 The initial target predictive accuracy of the model was 0.7325, which didn't meet the required standard. To increase the model's performance, I included  "NAME" as one of the feature variables. 
+
+![Accuracy of the Original Model Across Epochs](https://github.com/cycy94777/deep_learning_analysis/blob/main/image/accuracy.png?raw=true)
+
 After optimizing the model, the target predictive accuracy increased to 0.7523, slightly above 75%. Therefore, we could conclude that the model now meets the required guideline.
+
+![Accuracy of the Optimized Model Across Epochs](https://github.com/cycy94777/deep_learning_analysis/blob/main/image/opt_plot.png?raw=true)
+
 
 ## Summary
 The primary difference between the original and optimized models is the inclusion of the 'NAME' feature variable. Adding this feature has increased the model's predictive accuracy from 0.7325 to 0.7523, meeting the 75% guideline. 
